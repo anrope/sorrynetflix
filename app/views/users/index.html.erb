@@ -1,0 +1,23 @@
+<h1>Users</h1>
+
+<table class="condensed-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Password</th>
+      <th>Use Time</th>
+    </tr>
+    <tr>
+  </thead>
+  <tbody>
+    <% @users.each do |u| %>
+      <tr>
+          <th> <%= link_to u.name, u %> </th>
+          <th> <%= u.password %> </th>
+          <th> <%= u.use_time %> </th>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p> <%= link_to "Add a New User", new_user_path %> </p>

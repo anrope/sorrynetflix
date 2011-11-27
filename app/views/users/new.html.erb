@@ -1,0 +1,22 @@
+<h1>Add User</h1>
+
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :name %> <br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :password %> <br />
+    <%= f.text_field :password %>
+  </p>
+
+  <p>
+    <%= f.label :use_time %> <br />
+    <%= f.text_field :use_time %>
+  </p>
+
+  <p>
+    <%= f.submit "Add User" %>
+  </p>
+<% end %>
