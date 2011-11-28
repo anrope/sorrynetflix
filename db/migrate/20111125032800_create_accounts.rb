@@ -3,7 +3,9 @@ class CreateAccounts < ActiveRecord::Migration
     create_table :accounts do |t|
       t.string :login
       t.string :password
-      
+
+      t.references :user
+
       t.timestamps
     end
   end

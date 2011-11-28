@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20111125032800) do
   create_table "accounts", :force => true do |t|
     t.string   "login"
     t.string   "password"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20111125032800) do
     t.string   "name"
     t.string   "password"
     t.time     "use_time"
+    t.integer  "account_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

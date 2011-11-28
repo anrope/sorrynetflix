@@ -5,6 +5,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.time :use_time
 
+      t.references :account
+
       t.timestamps
     end
   end
