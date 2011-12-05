@@ -11,10 +11,17 @@
     <%= f.text_field :password %>
   </p>
 
-  <p>
-    <%= f.label :use_time %> <br />
-    <%= f.text_field :use_time %>
-  </p>
+  <%= fields_for @watchtime do |f| %>
+    <p>
+      <%= f.label :start %> <br />
+      <%= f.text_field :start %>
+    </p>
+    
+    <p>
+      <%= f.label :end %> <br />
+      <%= f.text_field :end %>
+    </p>
+  <% end %>
 
   <p>
     <%= f.submit "Add User" %>

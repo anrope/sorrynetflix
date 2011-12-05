@@ -9,13 +9,18 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @watchtime = WatchTime.new
   end
   
   def create
     @user = User.new(params[:user])
+    @watchtime = WatchTime.new(params[:watch_time])
 
     if @user.save
-      redirect_to users_path, :notice => "User added."
+      if @watchtime.save
+        @user.watch_times<< @watchtime
+        redirect_to users_path, :notice => "User added."
+      end
     else
       render "new"
     end

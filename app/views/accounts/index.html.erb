@@ -5,14 +5,18 @@
     <tr>
       <th>Login</th>
       <th>Password</th>
+      <th>Owner</th>
+      <th>Watchers</th>
     </tr>
     <tr>
   </thead>
   <tbody>
     <% @accounts.each do |a| %>
       <tr>
-          <th> <%= link_to a.login, a %> </th>
-          <th> <%= a.password %> </th>
+          <td> <%= link_to a.login, a %> </td>
+          <td> <%= a.password %> </td>
+          <td> <%= a.owner %> </td>
+          <td> <%= a.watchers %> </td>
       </tr>
     <% end %>
   </tbody>

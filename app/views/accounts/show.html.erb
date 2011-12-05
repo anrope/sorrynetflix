@@ -2,6 +2,12 @@
 <ul>
   <li> <%= @account.login %> </li>
   <li> <%= @account.password %> </li>
+  <li> <%= @account.watchers %> </li>
+  <ul>
+    <% @account.watchers.each do |u| %>
+      <li> <%= u.name %> @ <%= u.use_time %> </li>
+    <% end %>
+  </ul>
 </ul>
 <hr />
 <p> <%= link_to "Account Index", accounts_path %> </p>

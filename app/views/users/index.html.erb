@@ -5,16 +5,22 @@
     <tr>
       <th>Name</th>
       <th>Password</th>
-      <th>Use Time</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Owns</th>
+      <th>Watches</th>
     </tr>
     <tr>
   </thead>
   <tbody>
     <% @users.each do |u| %>
       <tr>
-          <th> <%= link_to u.name, u %> </th>
-          <th> <%= u.password %> </th>
-          <th> <%= u.use_time %> </th>
+          <td> <%= link_to u.name, u %> </td>
+          <td> <%= u.password %> </td>
+          <td> <%= u.watch_times.first.start %> </td>
+          <td> <%= u.watch_times.first.end %> </td>
+          <td> <%= u.owns %> </td>
+          <td> <%= u.watches %> </td>
       </tr>
     <% end %>
   </tbody>
